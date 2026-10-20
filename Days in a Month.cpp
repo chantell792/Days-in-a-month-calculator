@@ -21,36 +21,38 @@ int main()
 
 	else
 	{
-		IF year is divisible by 4;
-		int leapYear = yes;
-		IF year is divisible by 100;
-		int leapYear = no;
-		IF year is divisible by 400;
-	int leapYear = yes;
-	END IF;
+		IF year % 4 == 0;
+		bool leapYear = yes;
+		IF year % 100 == 0;
+		bool leapYear = no;
+		IF year % 400 == 0;
+	bool leapYear = yes;
+	}
 
-	END IF;
-
+}
+{
 	else;
-		int leapYear = no;
-		END IF;
+		bool leapYear = no;
+		}
 
-		IF month = 2;
+		if month = 2;
+		{
 		IF leapYear = yes;
 		int monthDays = 29;
 		else;
 		int monthDays = 28;
 		END IF;
 		else;
-		IF month = 4 OR month = 6 OR month = 9 OR month = 11;
+		{
+		IF month = 4 || month = 6 || month = 9 || month = 11;
 		int monthDays = 30;
-
+		}
 		else;
 		int monthDays = 31;
-		END IF;
-			END IF;
+		}
+			}
 
 			DISPLAY monthDays;
-			END IF;
+			}
 	return 0;
 }
