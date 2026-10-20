@@ -21,12 +21,22 @@ int main()
 
 	else
 	{
-		IF year % 4 == 0;
-		bool leapYear = yes;
-		IF year % 100 == 0;
-		bool leapYear = no;
-		IF year % 400 == 0;
-	bool leapYear = yes;
+		if (year % 4 == 0)
+		{
+			bool leapYear = true;
+		}
+		else
+		{
+			bool leapYear = false;
+		}
+		if (year % 100 == 0)
+		{
+			bool leapYear = false;
+		}
+		if (year % 400 == 0)
+		{
+			bool leapYear = true;
+		}
 	}
 
 }
@@ -37,22 +47,24 @@ int main()
 
 		if month = 2;
 		{
-		IF leapYear = yes;
+		if leapYear = yes;
 		int monthDays = 29;
 		else;
 		int monthDays = 28;
 		END IF;
 		else;
 		{
-		IF month = 4 || month = 6 || month = 9 || month = 11;
-		int monthDays = 30;
+		if (month = 4 || month = 6 || month = 9 || month = 11)
+		{
+			int monthDays = 30;
 		}
-		else;
-		int monthDays = 31;
+		else
+		{
+			int monthDays = 31;
 		}
 			}
 
-			DISPLAY monthDays;
-			}
+			std::cout << "Number of days in the month: " << monthDays << std::endl;
+		}
 	return 0;
 }
