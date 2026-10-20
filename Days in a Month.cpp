@@ -8,6 +8,9 @@ using namespace std;
 int main()
 {
     std::cout << "Days in a Month Calculator\n";
+	int monthDays;
+	bool leapYear = false;
+
 	int month;
 	std::cout << "Enter a month number from 1 - 12: ";
 	std::cin >> month;
@@ -40,19 +43,22 @@ int main()
 	}
 
 }
-{
-	else;
-		bool leapYear = no;
+	{
+		bool leapYear = false;
 		}
 
-		if month = 2;
+		if (month == 2)
 		{
-		if leapYear = yes;
-		int monthDays = 29;
-		else;
-		int monthDays = 28;
-		END IF;
-		else;
+			if (leapYear == true)
+			{
+				int monthDays = 29;
+			}
+			else
+			{
+				int monthDays = 28;
+			}
+		}
+		else
 		{
 		if (month = 4 || month = 6 || month = 9 || month = 11)
 		{
