@@ -10,7 +10,6 @@ int main()
     std::cout << "Days in a Month Calculator\n";
 	int monthDays;
 	bool leapYear = false;
-	bool leapYear = true;
 
 	int month;
 	std::cout << "Enter a month number from 1 - 12: ";
@@ -20,18 +19,13 @@ int main()
 	std::cin >> year;
 	if (month < 1 || month > 12)
 	{
-		std::cout << "Invalid - please input a number 1 - 12\n";
+		std::cout << "Invalid - please input a number 1 - 12" << std::endl;
 	}
-
 	else
 	{
 		if (year % 4 == 0)
 		{
 			leapYear = true;
-		}
-		else
-		{
-			leapYear = false;
 		}
 		if (year % 100 == 0)
 		{
@@ -52,14 +46,15 @@ int main()
 			{
 			 monthDays = 28;
 			}
+		}
+		else if (month == 4 || month == 6 || month == 9 || month == 11)
 		{
-		if (month == 4 || month == 6 || month == 9 || month == 11)
 			monthDays = 30;
 		}
+		else
 		{
 			monthDays = 31;
 		}
-			monthDays = 31;
 
 			std::cout << "Number of days in the month: " << monthDays << std::endl;
 		}
